@@ -1,4 +1,4 @@
-module github.com/sanemat/go-xgoinstall
+module github.com/sanemat/go-boilerplate
 
 go 1.13
 
