@@ -27,11 +27,11 @@ echo:
 
 .PHONY: build
 build: download
-	go build -ldflags=$(BUILD_LDFLAGS) ./cmd/github-repos
+	go build -ldflags=$(BUILD_LDFLAGS) ./cmd/boilerplate
 
 .PHONY: install
 install: download
-	go install -ldflags=$(BUILD_LDFLAGS) ./cmd/github-repos
+	go install -ldflags=$(BUILD_LDFLAGS) ./cmd/boilerplate
 
 .PHONY: crossbuild
 crossbuild:
