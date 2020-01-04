@@ -22,7 +22,7 @@ goimports:
 
 .PHONY: echo
 echo:
-	echo ${VERSION} ${BUILD_LDFLAGS}
+	echo $(VERSION) $(BUILD_LDFLAGS)
 
 .PHONY: build
 build: download
