@@ -46,3 +46,7 @@ upload:
 .PHONY: credits
 credits:
 	gocredits . > credits.txt
+
+.PHONY: changelog
+changelog:
+	git-chglog -o changelog.md --next-tag v$(VERSION)
