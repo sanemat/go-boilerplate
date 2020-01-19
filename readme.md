@@ -18,7 +18,7 @@
 
 ## License
 
-Copyright 2019 Matt (Sanemat) (Murahashi Kenichi)
+Copyright 2020 Matt (Sanemat) (Murahashi Kenichi)
 [Apache License Version 2.0](./license.txt)
 
 ## Credits
