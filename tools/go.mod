@@ -1,6 +1,6 @@
 module github.com/sanemat/go-boilerplate/tools
 
-go 1.13
+go 1.14
 
 require (
 	github.com/Songmu/gocredits v0.1.0 // indirect
