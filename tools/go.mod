@@ -20,7 +20,6 @@ require (
 	github.com/sanemat/go-xgoinstall v0.1.1 // indirect
 	github.com/tcnksm/ghr v0.13.0 // indirect
 	github.com/trivago/tgo v1.0.7 // indirect
-	github.com/tsuyoshiwada/go-gitcmd v0.0.0-20180205145712-5f1f5f9475df // indirect
 	github.com/urfave/cli v1.22.2 // indirect
 	golang.org/x/crypto v0.0.0-20210322153248-0c34fe9e7dc2 // indirect
 	golang.org/x/sys v0.0.0-20210403161142-5e06dd20ab57 // indirect
