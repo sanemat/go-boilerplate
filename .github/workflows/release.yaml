@@ -19,11 +19,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: src/github.com/${{ github.repository }}
-      - name: deps
-        run: |
-          cd $GOPATH/src/github.com/${{ github.repository }}
-          make install-tools
-        shell: bash
       - name: release
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}

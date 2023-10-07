@@ -1,4 +1,4 @@
-VERSION = $(shell gobump show -r)
+VERSION = $(shell go run github.com/x-motemen/gobump/cmd/gobump@v0.2.0 show -r)
 CURRENT_REVISION = $(shell git rev-parse --short HEAD)
 BUILD_LDFLAGS = "-s -w -X github.com/sanemat/go-boilerplate.revision=$(CURRENT_REVISION)"
 u := $(if $(update),-u)
@@ -11,14 +11,6 @@ test: download
 download:
 	go mod download && \
 	go mod tidy
-
-.PHONY: install-tools
-install-tools: download
-	$(MAKE) --directory=tools install-tools
-
-.PHONY: goimports
-goimports:
-	goimports -w .
 
 .PHONY: echo
 echo:
@@ -34,17 +26,17 @@ install: download
 
 .PHONY: crossbuild
 crossbuild:
-	goxz -pv=v$(VERSION) -build-ldflags=$(BUILD_LDFLAGS) \
+	go run github.com/Songmu/goxz/cmd/goxz@v0.9.1 -pv=v$(VERSION) -build-ldflags=$(BUILD_LDFLAGS) \
       -os=linux,darwin,windows -d=./dist/v$(VERSION) ./cmd/*
 
 .PHONY: upload
 upload:
-	ghr v$(VERSION) dist/v$(VERSION)
+	go run github.com/tcnksm/ghr@v0.16.0 v$(VERSION) dist/v$(VERSION)
 
 .PHONY: credits.txt
 credits.txt:
-	gocredits . > credits.txt
+	go run github.com/Songmu/gocredits/cmd/gocredits@v0.3.0 . > credits.txt
 
 .PHONY: changelog
 changelog:
-	git-chglog -o changelog.md --next-tag v$(VERSION)
+	go run github.com/git-chglog/git-chglog/cmd/git-chglog@v0.15.4 -o changelog.md --next-tag v$(VERSION)
