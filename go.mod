@@ -1,3 +1,3 @@
 module github.com/sanemat/go-boilerplate
 
-go 1.16
+go 1.21
