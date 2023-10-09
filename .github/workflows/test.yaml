@@ -23,11 +23,8 @@ jobs:
         with:
           go-version: 1.x
       - name: checkout
-        uses: actions/checkout@v2
-        with:
-          path: src/github.com/${{ github.repository }}
+        uses: actions/checkout@v3
       - name: test
         run: |
-          cd $GOPATH/src/github.com/${{ github.repository }}
           go test -coverprofile coverage.out -covermode atomic ./...
         shell: bash
