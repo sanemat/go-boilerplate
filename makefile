@@ -31,7 +31,7 @@ crossbuild:
 
 .PHONY: upload
 upload:
-	go run github.com/tcnksm/ghr@v0.16.0 v$(VERSION) dist/v$(VERSION)
+	go run github.com/tcnksm/ghr@v0.16.2 v$(VERSION) dist/v$(VERSION)
 
 .PHONY: credits.txt
 credits.txt:
